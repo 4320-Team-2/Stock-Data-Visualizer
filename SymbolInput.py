@@ -8,7 +8,7 @@ class SymbolInput(UserInput):
             self, 
             "Enter the stock symbol you are looking for")
 
-    def validateInput(self, input):
+    def isInputValid(self, input):
         """The shared validate input function."""
         if (input == "Test"):
             return True

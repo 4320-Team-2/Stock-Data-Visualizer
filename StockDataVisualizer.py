@@ -3,29 +3,13 @@ from ChartTypeInput import ChartTypeInput
 from Constants import Constants
 
 class StockDataVisualizer:
-    def __init__(self):
-
-        self.userInputs = {
-            Constants.SYMBOL: SymbolInput(),
-            Constants.CHARTTYPE: ChartTypeInput()
-        }
-
-    def gatherUserInput(self):
-        """ 
-        Using the required self.userInputs, prompts user for required inputs and validates provided values. 
-        Valid inputs are stored in the respective self.userInputs[i].value 
-        """
-
-        for field in self.userInputs:
-            ui = self.userInputs[field]
-            while True:
-                print(ui.optionsTxt)
-                userInput = input(ui.promptMsg + ":")
-                if(ui.trySetValue(userInput)):
-                    break
-                else:
-                    print("Value '" + userInput + "' is not valid.")
+    
+    def __init__(self, inputData):
+        """ Initalizes a stock data visualizer with the given StockDataVisualizerInputs. """
+        self.inputData = inputData
+        #TODO: Validate each input data has a set value
 
     def queryStockData(self):
-        #TODO: make API call for stock data using self.userInputs[i].values
-        raise Exception("unimplemented")
+        """ Given a set of inputs performs a stock query """
+        #TODO: make API call for stock data using self.inputData.userInputs[Constants.SYMBOL].value
+        #raise Exception("unimplemented")
