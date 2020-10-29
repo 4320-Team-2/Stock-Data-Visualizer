@@ -6,15 +6,16 @@ from Constants import Constants
 
 class StockDataVisualizerInputs:
     def __init__(self):
-        #TODO: Replace start date input with real object.
-        mockStartDateInput = lambda: None
-        mockStartDateInput.value = "2020-10-11"
+        #TODO: Mocked for now; replace start date input with real object.
+        startDateInput = lambda: None
+        startDateInput.value = "2020-10-11"
         
         self.userInputs = {
             Constants.SYMBOL: SymbolInput(),
             Constants.CHARTTYPE: ChartTypeInput(),
             Constants.SERIES: TimeSeriesInput(),
-            Constants.ENDDATE: EndDateInput(mockStartDateInput)
+    #TODO:  Constants.STARTDATE: startDateInput
+            Constants.ENDDATE: EndDateInput(startDateInput)
         }
 
     def gatherUserInput(self):
