@@ -20,7 +20,7 @@ class StockDataVisualizerInputs:
             ui = self.userInputs[field]
             while True:
                 #display the optional options txt to display valid options to the user
-                print(ui.optionsTxt)
+                print("\r\n" + ui.optionsTxt)
                 
                 # Prompt the user for valid input
                 userInput = input(ui.promptMsg + ":")
