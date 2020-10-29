@@ -22,7 +22,6 @@ class EndDateInput(UserInput):
             elif start > end:
                 print("[ERROR] Start date cannot be after end date\n")
             else:
-                print("Valid date input")
                 return True
         except ValueError:
             print("[ERROR] Invalid date provided.\n")

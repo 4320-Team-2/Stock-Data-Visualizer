@@ -1,6 +1,7 @@
 import sys
 from StockDataVisualizer import StockDataVisualizer
 from StockDataVisualizerInputs import StockDataVisualizerInputs
+from Constants import Constants
 
 # Main program loop 
 # Intializes and executes a stock query then prompts user
@@ -10,10 +11,12 @@ while True:
     inputs = StockDataVisualizerInputs()
     values = inputs.gatherUserInput()
     
+    #TODO: remove this mock when start ate is added.
+    values.update({Constants.STARTDATE: "2020-01-03"})
+
     # Using the gathered inputs to query stock data from the api
     s = StockDataVisualizer(values)
     s.queryStockData()
-    #s.generateGraph()
     
     while True:
         again = input("Would you like to view more stock data? ('Y' or 'N'):").lower()

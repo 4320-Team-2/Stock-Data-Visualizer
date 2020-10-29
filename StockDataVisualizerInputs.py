@@ -5,10 +5,11 @@ from EndDateInput import EndDateInput
 from Constants import Constants
 
 class StockDataVisualizerInputs:
+    """ Object for registering user input objects which will be iterated over and collected."""
     def __init__(self):
         #TODO: Mocked for now; replace start date input with real object.
         startDateInput = lambda: None
-        startDateInput.value = "2020-10-11"
+        startDateInput.value = "2020-01-03"
         
         self.userInputs = {
             Constants.SYMBOL: SymbolInput(),
@@ -21,7 +22,7 @@ class StockDataVisualizerInputs:
     def gatherUserInput(self):
         """ 
         Using the required self.userInputs, prompts user for required inputs and validates provided values. 
-        Valid inputs are stored in the respective self.userInputs[i].value 
+        Valid inputs are returned in a dictionary {key: constant, value: validated user input} 
         """
         kvp = {}
         # For each user input object 
