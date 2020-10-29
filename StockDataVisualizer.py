@@ -5,11 +5,10 @@ from Constants import Constants
 class StockDataVisualizer:
     
     def __init__(self, inputData):
-        """ Initalizes a stock data visualizer with the given StockDataVisualizerInputs. """
+        """ Initalizes a stock data visualizer with the given dictionary where key is input constant and value is the user input. """
         self.inputData = inputData
-        #TODO: Validate each input data has a set value
 
     def queryStockData(self):
         """ Given a set of inputs performs a stock query """
-        #TODO: make API call for stock data using self.inputData.userInputs[Constants.SYMBOL].value
+        #TODO: make API call for stock data using self.inputData[Constants.SYMBOL]
         #raise Exception("unimplemented")

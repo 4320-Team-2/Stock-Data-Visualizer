@@ -8,10 +8,10 @@ from StockDataVisualizerInputs import StockDataVisualizerInputs
 while True:
     # Gathering user inputs
     inputs = StockDataVisualizerInputs()
-    inputs.gatherUserInput()
+    values = inputs.gatherUserInput()
     
     # Using the gathered inputs to query stock data from the api
-    s = StockDataVisualizer(inputs)
+    s = StockDataVisualizer(values)
     s.queryStockData()
     #s.generateGraph()
     
