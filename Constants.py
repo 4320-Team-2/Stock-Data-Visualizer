@@ -3,6 +3,8 @@ class Constants:
     SYMBOL = "symbol"
     CHARTTYPE = "chartType"
     SERIES = "series"
+    STARTDATE = "startDate"
+    ENDDATE = "endDate"
     SYMBOL_SEARCH = "SYMBOL_SEARCH"
     API_URL = "https://www.alphavantage.co/query"
     API_KEY = "SPFP6JN8KMDZ9IPM"
