@@ -7,6 +7,9 @@ from Constants import Constants
 # Intializes and executes a stock query then prompts user
 # if they want a redo.
 while True:
+    print("Stock Data Visualizer\r\n" +
+    "===============================")
+
     # Gathering user inputs
     inputs = StockDataVisualizerInputs()
     values = inputs.gatherUserInput()
@@ -14,6 +17,7 @@ while True:
     # Using the gathered inputs to query stock data from the api
     s = StockDataVisualizer(values)
     s.queryStockData()
+    
     
     while True:
         again = input("Would you like to view more stock data? ('Y' or 'N'):").lower()
