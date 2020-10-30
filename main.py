@@ -10,9 +10,6 @@ while True:
     # Gathering user inputs
     inputs = StockDataVisualizerInputs()
     values = inputs.gatherUserInput()
-    
-    #TODO: remove this mock when start ate is added.
-    values.update({Constants.STARTDATE: "2020-01-03"})
 
     # Using the gathered inputs to query stock data from the api
     s = StockDataVisualizer(values)

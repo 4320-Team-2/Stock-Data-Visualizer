@@ -1,21 +1,22 @@
 from SymbolInput import SymbolInput
 from ChartTypeInput import ChartTypeInput
 from TimeSeriesInput import TimeSeriesInput
+from StartDateInput import StartDateInput
 from EndDateInput import EndDateInput
 from Constants import Constants
+
 
 class StockDataVisualizerInputs:
     """ Object for registering user input objects which will be iterated over and collected."""
     def __init__(self):
-        #TODO: Mocked for now; replace start date input with real object.
-        startDateInput = lambda: None
-        startDateInput.value = "2020-01-03"
+
+        startDateInput = StartDateInput()
         
         self.userInputs = {
             Constants.SYMBOL: SymbolInput(),
             Constants.CHARTTYPE: ChartTypeInput(),
             Constants.SERIES: TimeSeriesInput(),
-    #TODO:  Constants.STARTDATE: startDateInput
+            Constants.STARTDATE: startDateInput,
             Constants.ENDDATE: EndDateInput(startDateInput)
         }
 

@@ -1,6 +1,17 @@
 import datetime
 from UserInput import UserInput
-def startDateinput:
-    date_entry = input('Enter a date in YYYY-MM-DD format')
-    year, month, day = map(int, date_entry.split('-'))
-    date1 = datetime.date(year, month, day)
+from Constants import Constants
+
+class StartDateInput(UserInput):
+
+    def __init__(self):
+
+        UserInput.__init__(self,"Enter the start date (YYYY-MM-DD)")
+
+    def isInputValid(self, input):
+        try:
+            datetime.date.fromisoformat(input)
+            return True
+
+        except ValueError:
+            return False
